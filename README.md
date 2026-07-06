@@ -29,10 +29,10 @@ Python script to generate static HTML files for website galleries.
 
 ## Installation
 
-Install the required libraries using pip:
+Install using make:
 
 ```sh
-pip install tqdm Jinja2 Pillow rich-argparse cairosvg python-json-logger
+make install
 ```
 
 ## Usage
@@ -65,31 +65,31 @@ The script supports several command-line options to customize its behavior. Belo
 To generate HTML files and thumbnails for a directory `/data/pictures` and host them on `https://pictures.example.com`, run:
 
 ```sh
-./builder.py -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery"
+staticgallerybuilder -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery"
 ```
 
 To include a license and author:
 
 ```sh
-./builder.py -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery" -l cc-by -a "John Doe"
+staticgallerybuilder -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery" -l cc-by -a "John Doe"
 ```
 
 To specify a custom CSS theme:
 
 ```sh
-./builder.py -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery" --theme-path custom_theme.css
+staticgallerybuilder -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery" --theme-path custom_theme.css
 ```
 
 To exclude specific folders and specify file extensions:
 
 ```sh
-./builder.py -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery" --exclude-folder Archives --exclude-folder Temp -e .jpg -e .jpeg -e .png
+staticgallerybuilder -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery" --exclude-folder Archives --exclude-folder Temp -e .jpg -e .jpeg -e .png
 ```
 
 To generate a web manifest file:
 
 ```sh
-./builder.py -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery" -m
+staticgallerybuilder -p /data/pictures -w https://pictures.example.com -t "My Photo Gallery" -m
 ```
 
 ## Notes

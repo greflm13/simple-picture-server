@@ -10,6 +10,7 @@ rebuild: clean build
 
 install:
 	pip install .
+	ln -s $(HOME)/.local/state/staticgallerybuilder logs
 
 dev:
 	pip install -e . --group dev

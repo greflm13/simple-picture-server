@@ -210,7 +210,7 @@
         }
       },
       {
-        "command": "pyinstaller builder.py modules/*.py -n StaticGalleryBuilder-$(cat .version)-linux -F --add-data files:files --add-data templates:templates --add-data .version:.",
+        "command": "pyinstaller build.spec",
         "isBackground": false,
         "label": "Build",
         "problemMatcher": [],
@@ -263,7 +263,7 @@
         }
       },
       {
-        "command": "COLUMNS=120 ./builder.py --generate-help-preview help.svg",
+        "command": "COLUMNS=120 staticgallerybuilder --generate-help-preview help.svg",
         "isBackground": false,
         "label": "Create help svg",
         "problemMatcher": [],
